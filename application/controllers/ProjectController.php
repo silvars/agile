@@ -14,16 +14,39 @@ class ProjectController extends Zend_Controller_Action
 {
     public function indexAction()
     {
-        try {
-            $project = new Application_Model_DbTable_Project();
-            $this->view->projects = $project->fetchAll();
+        if ($this->getRequest()->isPost()) {
+            try {
+                $project = new Application_Model_Project();
+                $this->view->projectsd = $project->fetchAll();
+                $this->view->idproject = $this->getRequest()->getPost('id_project');
+            } catch (Exception $ex) {
+                echo json_encode(array(
+                    'success' => false,
+                    'message' => $ex->getMessage(),
+                    'code'    => $ex->getCode()
+                ));
+            }
         }
-        catch (Exception $ex) {
-            echo json_encode(array(
-                'success' => false,
-                'message' => $ex->getMessage(),
-                'code'    => $ex->getCode()
-            ));
+        $project = new Application_Model_Project();
+        $this->view->titles = $project->fetchAll();
+    }
+
+    public function searchAction()
+    {
+        if ($this->getRequest()->isPost()) {
+            try {
+                $project = new Application_Model_Project();
+                $this->view->projectsd = $project->fetchAll();
+                $this->view->idproject = $this->getRequest()->getPost('id_project');
+            } catch (Exception $ex) {
+                echo json_encode(array(
+                    'success' => false,
+                    'message' => $ex->getMessage(),
+                    'code'    => $ex->getCode()
+                ));
+            }
         }
+        $project = new Application_Model_Project();
+        $this->view->projects = $project->fetchAll();
     }
 }

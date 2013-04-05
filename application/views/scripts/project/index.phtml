@@ -1,4 +1,18 @@
 <?php $this->headTitle()->append('Tech For Soluções em TI - Project'); ?>
 <div id="content">
-    <?php die(print_r($this->projects)); ?>
+    <h1>Kanban Project</h1>
+    <div>
+        <form id="filter-project" method="post">
+            <fieldset>
+                <legend>Choose by project: </legend>
+                <select id="project">
+                    <option value="all">All Projects</option>
+                    <?php foreach ($this->titles as $title): ?>
+                        <option value="<?php echo $title['ID']; ?>" /><?php echo $title['ID'] . ' - ' . $title['pname']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+    <p>POST: <?php echo $this->idproject; ?>
 </div>
