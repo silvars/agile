@@ -28,8 +28,8 @@ class Application_Model_Issue extends Application_Model_DbTable_Project
                     'ji.PROJECT=p.ID')
                 ->join(array('it' => 'issuetype'),
                     'ji.issuetype=it.ID')
-                ->group('ji.PROJECT')
-                ->group('ji.issuestatus')
+                ->order('ji.PROJECT')
+                ->order('ji.issuestatus')
                 ->where('PROJECT IN (?)', $params);
 
                 die($select);
