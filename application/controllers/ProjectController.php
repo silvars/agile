@@ -16,9 +16,9 @@ class ProjectController extends Zend_Controller_Action
     {
         if ($this->getRequest()->isPost()) {
             try {
-                $project = new Application_Model_Project();
-                $this->view->projectsd = $project->fetchAll();
-                $this->view->idproject = $this->getRequest()->getPost('id_project');
+                $project = new Application_Model_Issue();
+                die(print_r($project->getProjecstByIds($this->getRequest()->getPost())));
+                // $project->getProjecstByIds($this->getRequest()->getPost());
             } catch (Exception $ex) {
                 echo json_encode(array(
                     'success' => false,
@@ -28,25 +28,6 @@ class ProjectController extends Zend_Controller_Action
             }
         }
         $project = new Application_Model_Project();
-        $this->view->titles = $project->fetchAll();
-    }
-
-    public function searchAction()
-    {
-        if ($this->getRequest()->isPost()) {
-            try {
-                $project = new Application_Model_Project();
-                $this->view->projectsd = $project->fetchAll();
-                $this->view->idproject = $this->getRequest()->getPost('id_project');
-            } catch (Exception $ex) {
-                echo json_encode(array(
-                    'success' => false,
-                    'message' => $ex->getMessage(),
-                    'code'    => $ex->getCode()
-                ));
-            }
-        }
-        $project = new Application_Model_Project();
-        $this->view->projects = $project->fetchAll();
+        $this->view->titles = $project->getProjectTitles();
     }
 }

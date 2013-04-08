@@ -22,7 +22,7 @@ class Application_Model_Project extends Application_Model_DbTable_Project
     {
         try {
             $sql = $this->select()
-                ->from('project');
+                ->from('project', array('ID', 'pname'));
 
         return $this->fetchAll($sql);
         } catch (Exception $ex) {

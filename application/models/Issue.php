@@ -1,6 +1,6 @@
 <?php
 /**
- * The Project Model class is used to make custom queries.
+ * The Issue Model class is used to make custom queries.
  *
  * @category  Model
  * @access    public
@@ -18,11 +18,22 @@ class Application_Model_Issue extends Application_Model_DbTable_Project
      * @access public
      * @return array
      */
-    public function getAllIssues()
+    public function getProjecstByIds(array $params)
     {
         try {
-            $sql = $this->getAdapter()->query("SELECT * FROM project")->fetchAll();
-            return $sql;
+            $select = $this->select()
+                ->setIntegrityCheck(false)
+                ->from(array('ji' => 'jiraissue'))
+                ->join(array('p' => 'project'),
+                    'ji.PROJECT=p.ID')
+                ->join(array('it' => 'issuetype'),
+                    'ji.issuetype=it.ID')
+                ->group('ji.PROJECT')
+                ->group('ji.issuestatus')
+                ->where('PROJECT IN (?)', $params);
+
+                die($select);
+            // return $select;
         } catch (Exception $ex) {
             echo json_encode(array(
                 'success' => false,
@@ -31,14 +42,5 @@ class Application_Model_Issue extends Application_Model_DbTable_Project
             ));
         }
     }
-    /*
-    SELECT jiraissue.ID, jiraissue.pkey, jiraissue.PROJECT, project.ID, project.pname, project.URL, project.LEAD, project.DESCRIPTION, project .pkey, jiraissue.REPORTER, jiraissue.ASSIGNEE, jiraissue.issuetype, jiraissue.SUMMARY, jiraissue.DESCRIPTION, jiraissue.ENVIRONMENT, jiraissue.issuestatus, jiraissue.TIMEORIGINALESTIMATE, jiraissue.TIMEESTIMATE, jiraissue.TIMESPENT, issuetype.ID, issuetype.SEQUENCE, issuetype.pname, issuetype.pstyle, issuetype.DESCRIPTION
-    FROM jiraissue
-    JOIN project
-    ON jiraissue.PROJECT=project.ID
-    INNER JOIN issuetype
-    ON jiraissue.issuetype=issuetype.ID
-    LIMIT 13
-    */
 }
 
