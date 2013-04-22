@@ -1,0 +1,18 @@
+<?php echo $this->doctype(); ?>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <?php echo $this->headTitle(); ?>
+        <?php $this->headLink()->appendStylesheet('/css/style.css') . PHP_EOL; ?>
+        <?php $this->headScript()->appendFile('/js/jquery-1.9.0.js') . PHP_EOL; ?>
+        <?php $this->headScript()->appendFile('/js/jquery.rules.js'); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headScript(); ?>
+    </head>
+     <body>
+         <div id="wrapper">
+             <?php echo $this->layout()->content; ?>
+         </div>
+     </body>
+</html>
