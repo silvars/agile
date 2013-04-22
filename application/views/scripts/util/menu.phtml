@@ -1,3 +1,0 @@
-<div id="menu">
-
-</div>
