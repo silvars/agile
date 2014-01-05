@@ -15,9 +15,9 @@ For run FreakTemplate you need install PHP 5.5 or later, after, you need to foll
 
 1) Clone the git repository for your project directory:
 
-<code>
+```bash
 $ cd /path/to/project/
-</code>
+```
 
 You can clone with HTTPS:
 
