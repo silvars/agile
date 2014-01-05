@@ -14,16 +14,19 @@ The files in this archive are released under the MIT license. You can find a cop
 For run FreakTemplate you need install PHP 5.5 or later, after, you need to follow steps:
 
 1) Clone the git repository for your project directory:
+
 <code>
 $ cd /path/to/project/
 </code>
 
 You can clone with HTTPS:
+
 <code>
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
 </code>
 
 Or SSH:
+
 <code>
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
 </code>
