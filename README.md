@@ -41,6 +41,7 @@ Done! Now you see into your root directory the basicly structure of project.
 
 For advanced Apache configuration options, see the official Apache documentation. The minimum basics to get your application running under Apache2 are:
 
+<code>
 #Virtual Host for FreakTemplate:
 <VirtualHost *:80>
     ServerName freak.localhost
@@ -55,3 +56,5 @@ For advanced Apache configuration options, see the official Apache documentation
     ErrorLog /var/log/apache2/freak_error.log
     CustomLog /var/log/apache2/freak_access.log combined
 </VirtualHost>
+<code>
+
