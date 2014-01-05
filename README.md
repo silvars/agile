@@ -1,6 +1,3 @@
-## Tech For TI
-[id]: http://www.techforti.com.br/wp-content/themes/techfor_theme/images/logo.png "Tech For Soluções em TI"
-
 ##FreakTemplate
 FreakTemplate is application template for web and mobile using Symfony 2.4.0
 
@@ -23,11 +20,13 @@ You can clone with HTTPS:
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
 
 Or SSH:
+<code>
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
-
+</code>
 After cloning project, you need rum Composer for install and manage dependencies.
+<code>
 $ php composer.phar install
-
+</code>
 Done! Now you see into your root directory the basicly structure of project.
 
 For advanced Apache configuration options, see the official Apache documentation. The minimum basics to get your application running under Apache2 are:
