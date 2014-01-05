@@ -14,19 +14,26 @@ The files in this archive are released under the MIT license. You can find a cop
 For run FreakTemplate you need install PHP 5.5 or later, after, you need to follow steps:
 
 1) Clone the git repository for your project directory:
+<code>
 $ cd /path/to/project/
+</code>
 
 You can clone with HTTPS:
+<code>
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
+</code>
 
 Or SSH:
 <code>
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
 </code>
+
 After cloning project, you need rum Composer for install and manage dependencies.
+
 <code>
 $ php composer.phar install
 </code>
+
 Done! Now you see into your root directory the basicly structure of project.
 
 For advanced Apache configuration options, see the official Apache documentation. The minimum basics to get your application running under Apache2 are:
