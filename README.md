@@ -11,9 +11,7 @@ The files in this archive are released under the MIT license. You can find a cop
 
 ### INSTALLATION
 
-For run FreakTemplate you need install PHP 5.5 or later, after, you need to follow steps:
-
-1) Clone the git repository for your project directory:
+Clone the git repository for your project directory:
 
 ```shell
 $ cd /path/to/project/
