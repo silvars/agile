@@ -38,9 +38,9 @@ After cloning project, you need rum Composer for install and manage dependencies
 $ php composer.phar install
 ```
 
-Done! Now you see into your root directory the basicly structure of project.
+Done! Now you see into your root directory the basic structure of project.
 
-For advanced Apache configuration options, see the official Apache documentation. The minimum basics to get your application running under Apache2 are:
+For advanced Apache configuration options, see the official [Apache documentation](http://httpd.apache.org/docs/current/mod/core.html#documentroot). The minimum basics to get your application running under Apache2 are:
 
 
 ```shell
