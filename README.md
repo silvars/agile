@@ -31,7 +31,7 @@ Or SSH:
 $ git clone https://github.com/FreakRabbit/FreakTemplate.git
 ```
 
-After cloning project, you need rum Composer for install and manage dependencies.
+After cloning project, you need rum [Composr](http://getcomposer.org/) for install and manage dependencies.
 
 
 ```shell
